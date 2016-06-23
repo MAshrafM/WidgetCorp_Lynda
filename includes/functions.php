@@ -1,0 +1,3 @@
+<?php
+	// All basic functions
+?>
