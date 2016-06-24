@@ -11,7 +11,10 @@
 				<div class="right_col">
 					<div class="row">
 						<h2>Content Area</h2>
-						
+						<?php 
+							echo $sel_subj . "<br />";
+							echo $sel_page . "<br />";
+						?>
 					</div>
 				</div>
 				

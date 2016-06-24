@@ -8,4 +8,5 @@
 	<link href="styles/bootstrap.min.css" rel="stylesheet">
 	<link href="styles/font-awesome.min.css" rel="stylesheet">
 	<link href="styles/custom.min.css" rel="stylesheet">
+	<link href="styles/style.css" rel="stylesheet">
 </head>

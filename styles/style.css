@@ -1,0 +1,14 @@
+/* custome style */
+
+.nav.child_menu>li>a {
+  display: inline-block;
+}
+
+a.subarrow{
+  position: absolute!important;
+  right: 0px;
+}
+.subarrow .fa{
+  font-size: 10px;
+  text-align: center;
+}

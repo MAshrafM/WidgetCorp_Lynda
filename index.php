@@ -1,3 +1,5 @@
+<?php include("includes/dbconnect.php"); ?>
+<?php require_once("includes/functions.php"); ?>
 <html>
 	<?php include("includes/head.php"); ?>
 	<body class="nav-md">
