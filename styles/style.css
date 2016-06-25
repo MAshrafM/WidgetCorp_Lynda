@@ -12,3 +12,34 @@ a.subarrow{
   font-size: 10px;
   text-align: center;
 }
+
+.x_panel .btn {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.add-page{
+	width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+.sudo-btn {
+    width: 120px;
+    height: 120px;
+    margin: 0px auto;
+    padding: 10px 5px;
+    font-size: 40px;
+    border: 1px solid;
+    border-radius: 5px;
+	cursor: pointer;
+	background: #26B99A;
+}
+.sudo-btn:hover{
+  background: #169F85;
+}
+.sudo-btn  a{
+	color: white;
+}
+
+	
