@@ -45,8 +45,18 @@
 								;
 								$subject_set = get_all_subjects();
 								while($subject = mysqli_fetch_array($subject_set)){
-									echo "<div class='col-md-4 col-xs-12'><div class='x_panel tile fixed_height_320'>";
-									echo "	<div class='x_title'><h2><a href='content.php?subj=".urlencode($subject["id"])."'>".$subject["menu_name"]."</a></h2><div class='clearfix'></div></div>";
+									echo "<div class='col-md-4 col-xs-12'>
+										  <div class='x_panel tile fixed_height_320'>";
+									echo "<div class='x_title'>
+										  <h2>
+										  <a href='content.php?subj=".urlencode($subject["id"])."'>".$subject["menu_name"]."</a>
+										  </h2>
+										  <ul class='nav navbar-right panel_toolbox'>
+										  <li><a class='collapse-link'><i class='fa fa-chevron-up'></i></a></li>
+										  <li><a href='edit_subject.php?subj=".urlencode($subject["id"])."'><i class='fa fa-wrench'></i></a></li>
+										  <li><a href='delete_subject.php?subj=".urlencode($subject["id"])."' onclick=\" return confirm('Are you sure you want to delete this subject');\"><i class='fa fa-close'></i></a></li>
+										  </ul>
+										  <div class='clearfix'></div></div>";
 									$pages_set = get_pages_for_subject($subject["id"]);
 									$pages = mysqli_num_rows($pages_set);
 									if($pages < 1){
