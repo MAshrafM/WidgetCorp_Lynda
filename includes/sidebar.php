@@ -1,5 +1,9 @@
 <?php
-	if(isset($_GET['subj'])){
+	if(isset($_GET['subj']) && isset($_GET['page'])){
+		$sel_page = get_page_by_id($_GET['page']);
+		$sel_subject = get_subject_by_id($_GET['subj']);
+	}
+	elseif(isset($_GET['subj'])){
 		$sel_page = NULL;
 		$sel_subject = get_subject_by_id($_GET['subj']);
 	}

@@ -62,7 +62,7 @@
 									if($pages < 1){
 										echo "<div class='x_content'>
 										<div class='add-page'>
-										<div class='sudo-btn'><a><i class='fa fa-plus'></i> Page</a></div>
+										<div class='sudo-btn'><a href='new_page.php?subj=".urlencode($subject["id"])."'><i class='fa fa-plus'></i> Page</a></div>
 										</div>
 										</div>
 										</div></div>";
@@ -70,10 +70,21 @@
 									else{
 										echo "<div class='x_content'><ul>";
 										while($page = mysqli_fetch_array($pages_set)){
-											echo "<li><h4><a href='content.php?page=". urlencode($page["id"])."'>{$page["menu_name"]}</a></h4></li>";
+											echo "
+											<li>
+											<h4><a href='content.php?page=". urlencode($page["id"])."'>{$page["menu_name"]}</a></h4>
+											
+											<div class='page_toolbox'>
+											<ul class='nav navbar-right panel_toolbox'>
+											<li><a href='edit_page.php?page=".urlencode($page["id"])."&subj=".urlencode($subject["id"])."'><i class='fa fa-wrench'></i></a></li>
+											<li><a href='delete_page.php?page=".urlencode($page["id"])."' onclick=\" return confirm('Are you sure you want to delete this page');\"><i class='fa fa-close'></i></a></li>
+											</ul>
+											</div>
+											</li>
+											";
 										}
 										echo"</ul>
-										</div><button class='btn btn-success'><i class='fa fa-plus'></i> Page</button>
+										</div><div class='add_page_btn'><a class='btn btn-success' href='new_page.php?subj=".urlencode($subject["id"])."'><i class='fa fa-plus'></i> Page</a></div>
 										</div></div>";
 									}
 								}
@@ -92,5 +103,6 @@
 		<script src="scripts/jquery.min.js"></script>
 		<script src="scripts/bootstrap.min.js"></script>
 		<script src="scripts/custom.min.js"></script>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>

@@ -42,4 +42,21 @@ a.subarrow{
 	color: white;
 }
 
-	
+.x_content h4{
+	display: inline;
+}
+.x_content ul li {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed;
+    height: 25px;
+    box-sizing: content-box;
+}
+
+.x_content ul li ul li {
+    border-bottom: 0px;
+}
+
+.page_toolbox{
+	float: right;
+}
