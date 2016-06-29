@@ -33,14 +33,14 @@
                   <ul class="nav child_menu">
 					
                       <?php 
-                          $subject_set = get_all_subjects();
+                          $subject_set = get_all_subjects(false);
                             
                           while($subject = mysqli_fetch_array($subject_set)){
                               echo "<li";
 							  if($sel_subject["id"] == $subject["id"]){ echo " class='current-page'";}
 							  echo "><a href='content.php?subj=".urlencode($subject["id"])."'>".$subject["menu_name"];
                  
-							  $pages_set = get_pages_for_subject($subject["id"]);
+							  $pages_set = get_pages_for_subject($subject["id"], false);
                               $pages = mysqli_num_rows($pages_set);
                               if($pages < 1){
                                   echo "</a></li>";

@@ -27,23 +27,29 @@
 	}
   }
   
-  function get_all_subjects(){
+  function get_all_subjects($public = true){
 	global $connection;
 	$query = "SELECT * 
-              FROM subjects 
-              ORDER BY position ASC";
+              FROM subjects";
+	if($public){
+		$query .= " WHERE visible = 1";
+	}
+    $query .= " ORDER BY position ASC";
     $subject_set = mysqli_query($connection, $query);
                             
     confirm_query($subject_set);
 	return $subject_set;
   }
   
-  function get_pages_for_subject($subject_id){
+  function get_pages_for_subject($subject_id, $public = true){
 	global $connection;
 	$query = "SELECT *
               FROM pages 
-              WHERE subject_id = {$subject_id}
-              ORDER BY position ASC";
+              WHERE subject_id = {$subject_id}";
+	if($public){
+		$query .= " AND visible = 1";
+	}
+    $query .= " ORDER BY position ASC";
     $pages_set = mysqli_query($connection, $query);
                                 
     confirm_query($pages_set);
@@ -85,6 +91,16 @@
 	}
 	else{
 	  return NULL;
+	}
+  }
+  
+  function get_default_page($subject_id){
+	$page_set = get_pages_for_subject($subject_id, true);
+	if($first_page = mysqli_fetch_array($page_set)){
+		return $first_page;
+	}
+	else{
+		return NULL;
 	}
   }
   

@@ -13,6 +13,9 @@ a.subarrow{
   text-align: center;
 }
 
+.x_panel{
+	padding-bottom: 50px;
+}
 .x_panel .btn {
     position: absolute;
     bottom: 0px;
