@@ -7,7 +7,7 @@
 				</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">MAshraf</a></li>
+				<li><a href="#"><?php echo $_SESSION['username']; ?></a></li>
 			</ul>
 		</nav>
 	</div>

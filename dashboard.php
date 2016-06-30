@@ -12,17 +12,7 @@
 				
 				<div class="right_col">
 					<div class="row">
-						<?php
-							if(isset($sel_subject)){
-								include("includes/show_subject.php");
-							}
-							elseif(isset($sel_page)){
-								include("includes/show_page.php");
-							}
-							else{
-								include("includes/show_contentarea.php");
-							}
-						?>
+						<h2 class="text-center"> Welcome To The Staff Area, <?php echo $_SESSION['username']; ?> </h2>
 					</div>
 				</div>
 				

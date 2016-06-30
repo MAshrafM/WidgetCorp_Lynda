@@ -1,25 +1,9 @@
 <?php require_once("includes/session.php"); ?>
 <?php include("includes/dbconnect.php"); ?>
 <?php require_once("includes/functions.php"); ?>
-
 <html>
 	<?php include("includes/head.php"); ?>
 	<body>
-	<div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-        <!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Login </h4>
-				</div>
-				<div class="modal-body">		
-					<?php include("includes/login.php"); ?>
-				</div>
-			</div>
-        </div>
-    </div>
-	</div>
 		<nav class="navbar">
 		  <div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -48,33 +32,14 @@
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
+		
 		<main class="container">
 			<div class="row">
-				<div class="jumbotron">
-					<h1>Welcome to our Website</h2>
-				</div>
-			</div>
-			
-			<div class="row">
-				<h2 class="text-center">Latest Articles</h2>
-				<div class="col-md-4"></div>
-				<div class="col-md-4"></div>
-				<div class="col-md-4"></div>
-			</div>
-			<div class="row">
-				<h2 class="text-center">Social Activity</div>
-				<div class="col-md-4"></div>
-				<div class="col-md-4"></div>
-			</div>
-			<div class="row">
-				<h2 class="text-center">Contact Us</div>
-				<div class="col-md-6"></div>
+				<?php include("includes/login.php"); ?>
 			</div>
 		</main>
 		
-		
 		<?php include("includes/foot.php"); ?>
-		
 		
 		<script src="scripts/jquery.min.js"></script>
 		<script src="scripts/bootstrap.min.js"></script>
